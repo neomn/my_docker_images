@@ -8,6 +8,7 @@ class Solution
      * @return Boolean
      */
     function isAnagram($s, $t) {
+
         $sParts = str_split($s);
         $tParts = str_split($t);
 
@@ -16,6 +17,6 @@ class Solution
         $s = implode($sParts);
         $t = implode($tParts);
 
-        return strcmp($s, $t) == 0;
+        return strcmp($s, $t) === 0;
     }
 }
