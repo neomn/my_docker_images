@@ -7,7 +7,7 @@ class Solution
      * @param String $t
      * @return Boolean
      */
-    function isAnagram($s, $t) {
+    function isAnagram($s, $t){
 
         $sParts = str_split($s);
         $tParts = str_split($t);
