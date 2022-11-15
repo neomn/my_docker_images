@@ -13,9 +13,9 @@ class Solution
 
         sort($sParts);
         sort($tParts);
-        return implode($sParts) . implode($tParts);
+        $s = implode($sParts);
+        $t = implode($tParts);
+
+        return strcmp($s, $t) == 0;
     }
 }
-
-$solution = new Solution();
-echo($solution->isAnagram('abcdfrg','zyxw'));
