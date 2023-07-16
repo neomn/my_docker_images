@@ -3,4 +3,5 @@ RUN       mkdir app
           apk update &&\
           pip install fastapi==0.100.0
 WORKDIR   /app
+CMD       ["/bin/sh", "-c", "nginx"]
 
