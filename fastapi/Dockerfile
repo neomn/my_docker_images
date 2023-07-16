@@ -1,7 +1,7 @@
 FROM      python:3.12.0b4-alpine3.18
 RUN       mkdir app
           apk update &&\
-          pip install fastapi==0.100.0
+          pip install uvicorn==0.23.0  fastapi==0.100.0
 WORKDIR   /app
 CMD       ["/bin/sh", "-c", "nginx"]
 
