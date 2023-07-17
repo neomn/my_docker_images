@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 nginx
 uvicorn main:app
