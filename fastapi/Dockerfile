@@ -5,9 +5,8 @@ COPY      docker_cmd_script.sh    /startup_script/docker_cmd_script.sh
 COPY      src                     /app
 RUN       apk   update                                                  &&\
           apk   add               nginx=1.24.0-r6                       &&\
-          pip   install           --upgrade pip                         &&\ 
-          pip   install           fastapi==0.100.0  sqlalchemy==2.0.19    \
-                                  uvicorn==0.23.0                       &&\
+          pip   install           uvicorn==0.23.0   fastapi==0.100.0      \
+                                  sqlalchemy==2.0.19                    &&\
           chmod +x                /startup_script/docker_cmd_script.sh
 WORKDIR   /app
 CMD       ["/startup_script/docker_cmd_script.sh"]
