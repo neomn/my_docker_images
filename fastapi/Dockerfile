@@ -1,4 +1,4 @@
-FROM      python:3.12.0b4-alpine3.18
+FROM      python:3.11-alpine
 RUN       mkdir   app  startup_script
 COPY      nginx/default.conf      /etc/nginx/http.d/default.conf
 COPY      docker_cmd_script.sh    /startup_script/docker_cmd_script.sh
