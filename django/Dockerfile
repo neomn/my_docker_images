@@ -7,7 +7,7 @@ COPY    docker_cmd_script.sh    /startup_script
 RUN     apk update                                                   &&\  
         apk add                 nginx=1.24.0-r6                      &&\
         pip install             gunicorn==20.1.0  Django==4.2.3        \
-                                psycopg==3.1.19 
+                                psycopg==3.1.9 
         chmod +x                /startup_script/docker_cmd_script.sh
 WORKDIR /app
 CMD     ["/startup_script/docker_cmd_script.sh"]
