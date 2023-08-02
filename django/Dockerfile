@@ -9,7 +9,7 @@ RUN     apk update                                                              
         pip install             --upgrade pip                                       &&\
         pip install             gunicorn==20.1.0              Django==4.2.3           \
                                 psycopg2-binary==2.9.6        python-dotenv==1.0.0    \
-                                djangorestframework==3.14.0                         &&\
+                                djangorestframework==3.14.0   pika==1.3.2           &&\
         chmod +x                /startup_script/docker_cmd_script.sh
 WORKDIR /app
 CMD     ["/startup_script/docker_cmd_script.sh"]
