@@ -8,7 +8,7 @@ RUN       apk   update                                                        &&
           pip   install           uvicorn==0.23.0     fastapi==0.100.0          \
                                   sqlalchemy==2.0.19  python-dotenv==1.0.0      \
                                   pyjwt==2.8.0        psycopg2-binary==2.9.7    \
-                                  influxdb==5.3.1                             &&\
+                                  influxdb==5.3.1     pytest==7.4.2           &&\
           chmod +x                /startup_script/docker_cmd_script.sh
 WORKDIR   /app
 CMD       ["/startup_script/docker_cmd_script.sh"]
