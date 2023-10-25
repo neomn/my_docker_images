@@ -12,7 +12,7 @@ RUN       pip   install   uvicorn==0.23.0         fastapi==0.100.0          \
                           influxdb==5.3.1         pytest==7.4.2             \
                           PyYAML==6.0.1           aioredis==2.0.1           \
                           pyotp==2.9.0            qrcode==7.4.2             \
-                          redis==5.0.1            redis_om==0.2.1
+                          redis-om==0.2.1
 RUN       chmod +x        /startup_script/docker_cmd_script.sh
 WORKDIR   /app
 CMD       ["/startup_script/docker_cmd_script.sh"]
