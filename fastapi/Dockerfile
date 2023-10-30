@@ -13,7 +13,7 @@ RUN       pip   install   uvicorn==0.23.0         fastapi==0.100.0          \
                           PyYAML==6.0.1           aioredis==2.0.1           \
                           pyotp==2.9.0            qrcode==7.4.2             \
                           redis-om==0.2.1         
-RUN      pip    install   fastapi_cache==0.1.0
+RUN      pip    install   fastapi_cache2==0.2.1
 RUN       chmod +x        /startup_script/docker_cmd_script.sh
 WORKDIR   /app
 CMD       ["/startup_script/docker_cmd_script.sh"]
