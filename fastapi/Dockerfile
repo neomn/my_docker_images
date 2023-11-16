@@ -13,7 +13,7 @@ RUN       pip   install   uvicorn==0.23.0         fastapi==0.100.0          \
                           PyYAML==6.0.1           pyotp==2.9.0              \
                           fastapi_cache2==0.2.1   redis==5.0.1              \
                           neocrypto==0.0.3a0      qrcode==7.4.2             \
-                          alembic==1.12.1
+                          alembic==1.12.1         SQLAlchemy-Utils==0.41.1
 RUN       chmod +x        /startup_script/docker_cmd_script.sh
 WORKDIR   /app
 CMD       ["/startup_script/docker_cmd_script.sh"]
