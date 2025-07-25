@@ -1,0 +1,50 @@
+
+services:
+
+  ansible:
+    image: neomn110/ansible:0.0.1
+    container_name: ansible
+    networks:
+      - custom_net
+
+  vm1:
+    image: neomn110/docker-based-vm:0.0.1
+    container_name: vm1
+    networks:
+      custom_net:
+        ipv4_address: 172.72.0.11
+
+  vm2:
+    image: neomn110/docker-based-vm:0.0.1
+    container_name: vm2
+    networks:
+      custom_net:
+        ipv4_address: 172.72.0.12
+
+  vm3:
+    image: neomn110/docker-based-vm:0.0.1
+    container_name: vm3
+    networks:
+      custom_net:
+        ipv4_address: 172.72.0.13
+
+  vm4:
+    image: neomn110/docker-based-vm:0.0.1
+    container_name: vm4
+    networks:
+      custom_net:
+        ipv4_address: 172.72.0.14
+
+  vm5:
+    image: neomn110/docker-based-vm:0.0.1
+    container_name: vm5
+    networks:
+      custom_net:
+        ipv4_address: 172.72.0.15
+
+networks:
+  custom_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.72.0.0/24
